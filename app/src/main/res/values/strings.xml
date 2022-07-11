@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Casillero Inteligente CSS</string>
+    <string name="version_demo">VERSION DEMO</string>
+    <string name="cargar_inventario">CARGAR INVENTARIO</string>
+    <string name="recoger_paquete">RECOGER PAQUETE</string>
+    <string name="no_de_telefono">No. de Teléfono</string>
+    <string name="no_de_orden">No. de Orden</string>
+    <string name="nombre_courier">Courier</string>
+    <string name="confirmar_login_1">Confirmar Inicio de Sesión</string>
+</resources>
