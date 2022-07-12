@@ -4,6 +4,11 @@ import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.serialport.SerialPort;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.Scheduler;
+import org.greenrobot.eventbus.EventBus;
+
 
 public class MainActivity extends AppCompatActivity {
     //declaración de objetos

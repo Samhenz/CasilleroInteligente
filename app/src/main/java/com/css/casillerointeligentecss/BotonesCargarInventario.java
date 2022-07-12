@@ -38,7 +38,6 @@ public class BotonesCargarInventario extends AppCompatActivity implements View.O
         switch (v.getId()){
             case R.id.button:
 
-
                 Toast.makeText(this, "Caja 1 abierta",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.button2:
