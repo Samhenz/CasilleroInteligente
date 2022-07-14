@@ -15,19 +15,23 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 
 public class SerialPortManager {
+
     private static final String TAG = "SerialPortManager";
 
     private SerialReadThread mReadThread;
     private OutputStream mOutputStream;
     private HandlerThread mWriteThread;
     private Scheduler mSendScheduler;
+    private InputStream mInputStream;
 
     private static class InstanceHolder {
 
         public static SerialPortManager sManager = new SerialPortManager();
+
     }
 
     public static SerialPortManager instance() {
@@ -57,8 +61,9 @@ public class SerialPortManager {
      * @return
      */
     public SerialPort open(String devicePath, String baudrateString) {
-        if (mSerialPort != null) {
-            close();
+
+        if (mSerialPort != null) {  //Si el objeto Serial está "lleno" (previamente abierto)
+            close();                //llamar a la función Cerrar();
         }
 
         try {
@@ -66,14 +71,15 @@ public class SerialPortManager {
             int baurate = Integer.parseInt(baudrateString);
             mSerialPort = new SerialPort(device, baurate,8,2,1,0);
 
-            mReadThread = new SerialReadThread(mSerialPort.getInputStream());
-            mReadThread.start();
+            mInputStream = mSerialPort.getInputStream();
+            //mReadThread = new SerialReadThread(mSerialPort.getInputStream());
+            //mReadThread.start();
 
             mOutputStream = mSerialPort.getOutputStream();
 
-            mWriteThread = new HandlerThread("write-thread");
-            mWriteThread.start();
-            mSendScheduler = AndroidSchedulers.from(mWriteThread.getLooper());
+            //mWriteThread = new HandlerThread("write-thread");
+            //mWriteThread.start();
+            //mSendScheduler = AndroidSchedulers.from(mWriteThread.getLooper());
 
             return mSerialPort;
         } catch (Throwable tr) {
@@ -87,9 +93,12 @@ public class SerialPortManager {
      * cerrar serial port
      */
     public void close() {
+        /*
         if (mReadThread != null) {
             mReadThread.close();
         }
+         */
+
         if (mOutputStream != null) {
             try {
                 mOutputStream.close();
@@ -98,9 +107,13 @@ public class SerialPortManager {
             }
         }
 
+
+        /*
         if (mWriteThread != null) {
             mWriteThread.quit();
         }
+        */
+
 
         if (mSerialPort != null) {
             mSerialPort.close();
@@ -109,13 +122,22 @@ public class SerialPortManager {
     }
 
     /**
-     * enviar datos
+     * Enviar Data desde Command()
      *
      * @param datas
      * @return
      */
     private void sendData(byte[] datas) throws Exception {
         mOutputStream.write(datas);
+    }
+
+    /**
+     * Enviar HEX Data
+     *
+     */
+    public void sendHEXData(final String command) throws IOException {
+        byte[] hex_bytes = ByteUtil.hexStr2bytes(command);
+        mOutputStream.write(hex_bytes);
     }
 
     /**

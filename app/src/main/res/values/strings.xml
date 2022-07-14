@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Casillero Inteligente CSS</string>
+    <string name="app_name">Casillero Inteligente</string>
     <string name="version_demo">VERSION DEMO</string>
     <string name="cargar_inventario">CARGAR INVENTARIO</string>
     <string name="recoger_paquete">RECOGER PAQUETE</string>
@@ -7,15 +7,26 @@
     <string name="no_de_orden">No. de Orden</string>
     <string name="nombre_courier">Courier</string>
     <string name="confirmar_login_1">Confirmar Inicio de Sesión</string>
-    <string name="box_1">Box 1</string>
-    <string name="box_2">Box 2</string>
-    <string name="box_3">Box 3</string>
-    <string name="box_7">Box 7</string>
-    <string name="box_8">Box 8</string>
-    <string name="box_9">Box 9</string>
-    <string name="box_4">Box 4</string>
-    <string name="box_5">Box 5</string>
-    <string name="box_6">Box 6</string>
-    <string name="box_10">Box 10</string>
+    <string name="box_1">1</string>
+    <string name="box_2">2</string>
+    <string name="box_3">3</string>
+    <string name="box_7">7</string>
+    <string name="box_8">8</string>
+    <string name="box_9">9</string>
+    <string name="box_4">4</string>
+    <string name="box_5">5</string>
+    <string name="box_6">6</string>
+    <string name="box_10">10</string>
+    <string name="select_serial_port">Puerto:</string>
+    <string name="select_baud_rate">Baudrate:</string>
+    <string name="open_serial_port">Abrir puerto</string>
+    <string name="close_serial_port">Cerrar puerto</string>
+    <string name="no_serial_device">Disp serial</string>
+    <string name="send_data">Enviar</string>
+    <string name="input_data">Comandos HEX</string>
+    <string name="load_cmd_list">cargar archivo ext</string>
+    <string name="clear">Limpiar</string>
+    <string name="auto_end">auto end</string>
+    <string name="info_cargar_inventario">Bienvenido. Seleccione un casillero, cargue el inventario y presione el botón Finalizar.</string>
 
 </resources>

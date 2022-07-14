@@ -8,27 +8,28 @@
 
     <EditText
         android:id="@+id/editText_NoTelefono"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
         android:ems="10"
         android:hint="@string/no_de_telefono"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.182" />
+        app:layout_constraintVertical_bias="0.154" />
 
     <EditText
         android:id="@+id/editText_Orden"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
         android:ems="10"
         android:hint="@string/no_de_orden"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -38,12 +39,13 @@
 
     <EditText
         android:id="@+id/editText_Courier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
         android:ems="10"
         android:hint="@string/nombre_courier"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -52,12 +54,12 @@
 
     <Button
         android:id="@+id/btn_iniciarSesion"
-        android:layout_width="700px"
-        android:layout_height="200px"
-        android:backgroundTint="#3F51B5"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:backgroundTint="#2196F3"
         android:text="@string/confirmar_login_1"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
