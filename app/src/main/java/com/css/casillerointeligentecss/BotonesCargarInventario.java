@@ -275,7 +275,6 @@ public class BotonesCargarInventario extends AppCompatActivity implements View.O
                 break;
             case R.id.btnOK_cargarInventario:
                 //Toast.makeText(this, "Boton FINALIZAR presionadp",Toast.LENGTH_SHORT).show();
-                //SerialPortManager.instance().close();
                 startActivity(new Intent(BotonesCargarInventario.this, MainActivity.class));
                 break;
         }
