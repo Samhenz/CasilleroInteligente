@@ -1,13 +1,16 @@
 package com.css.casillerointeligentecss.comn;
 
 import android.os.SystemClock;
+
+import com.css.casillerointeligentecss.util.ToastUtil;
 import com.licheedev.hwutils.ByteUtil;
 import com.licheedev.myutils.LogPlus;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import com.css.casillerointeligentecss.comn.message.LogManager;
-import com.css.casillerointeligentecss.comn.message.RecvMessage;
+import com.css.casillerointeligentecss.util.ToastUtil;
+//import com.css.casillerointeligentecss.comn.message.LogManager;
+//import com.css.casillerointeligentecss.comn.message.RecvMessage;
 
 /**
  * Read serial port threads
@@ -63,9 +66,10 @@ public class SerialReadThread extends Thread {
      * @param size
      */
     private void onDataReceive(byte[] received, int size) {
-        // TODO: 2018/3/22 解决粘包、分包等
+        // TODO: 2018/3/22
         String hexStr = ByteUtil.bytes2HexStr(received, 0, size);
-        LogManager.instance().post(new RecvMessage(hexStr));
+        //ToastUtil.showOne(this,hexStr);   // Mostrar comando de respuesta
+        // LogManager.instance().post(new RecvMessage(hexStr));
     }
 
     /**

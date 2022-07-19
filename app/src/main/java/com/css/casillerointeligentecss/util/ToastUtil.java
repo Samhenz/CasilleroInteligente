@@ -7,6 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.lang.ref.WeakReference;
 import com.css.casillerointeligentecss.R;
+//import com.css.casillerointeligentecss.comn.SerialReadThread;
 
 public class ToastUtil {
     private static WeakReference<Toast> mToastRef = null;
@@ -40,6 +41,8 @@ public class ToastUtil {
 
     /**
      * Toast
+     * @param context
+     * @param resid
      */
     public static void showOne(Context context, int resid) {
         showOne(context, context.getResources().getString(resid));

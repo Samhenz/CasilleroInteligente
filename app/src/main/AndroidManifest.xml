@@ -20,6 +20,9 @@
         android:theme="@style/Theme.CasilleroInteligenteCSS"
         tools:targetApi="31">
         <activity
+            android:name=".BotonesRecogerProducto"
+            android:exported="false" />
+        <activity
             android:name=".LoginRecogerProducto"
             android:exported="false" />
         <activity

@@ -14,8 +14,6 @@ public class SplashScreen extends AppCompatActivity {
     ProgressBar linearProgressBar;
     int Counter = 0;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +35,8 @@ public class SplashScreen extends AppCompatActivity {
                     startActivity(intent);
                     finish(); //Para evitar que se vuelve a abrir la Splash Screen
                 }
-
             }
         };
-
-        tiempo.schedule(tarea,100,100);
+        tiempo.schedule(tarea,100,50);
     }
 }

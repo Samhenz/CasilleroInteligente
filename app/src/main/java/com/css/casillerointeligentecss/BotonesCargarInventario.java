@@ -15,6 +15,19 @@ import com.css.casillerointeligentecss.comn.Device;
 import com.css.casillerointeligentecss.comn.SerialPortManager;
 import com.css.casillerointeligentecss.util.ToastUtil;
 import com.css.casillerointeligentecss.util.PrefHelper;
+import static com.css.casillerointeligentecss.R.string.cmd_1;
+import static com.css.casillerointeligentecss.R.string.cmd_2;
+import static com.css.casillerointeligentecss.R.string.cmd_3;
+import static com.css.casillerointeligentecss.R.string.cmd_4;
+import static com.css.casillerointeligentecss.R.string.cmd_5;
+import static com.css.casillerointeligentecss.R.string.cmd_6;
+import static com.css.casillerointeligentecss.R.string.cmd_7;
+import static com.css.casillerointeligentecss.R.string.cmd_8;
+import static com.css.casillerointeligentecss.R.string.cmd_9;
+import static com.css.casillerointeligentecss.R.string.cmd_10;
+
+
+
 
 import java.io.IOException;
 
@@ -63,8 +76,9 @@ public class BotonesCargarInventario extends AppCompatActivity implements View.O
         btnFinalizar = findViewById(R.id.btnOK_cargarInventario);
         btnFinalizar.setOnClickListener(this);
 
-        initDevice();       // Inicializamos Disp serial
+        initDevice();         // Inicializamos Disp serial
         switchSerialPort(); // Aperturamos Puerto Serial COM3
+        //updateViewState(true); *Solo Debug. Habilitar botones sin Serial COM.
     }
 
 
@@ -88,54 +102,104 @@ public class BotonesCargarInventario extends AppCompatActivity implements View.O
     private void sendData(int btnNum) throws IOException {
         switch (btnNum){
             case 1:
-                cmdHEX = "AAEB22020000B955";
-                SerialPortManager.instance().sendHEXData(cmdHEX);
-                //Toast.makeText(this, cmdHEX,Toast.LENGTH_SHORT).show();
+                //cmdHEX = "AAEB22020000B955";
+                if (mOpened){
+                    SerialPortManager.instance().sendHEXData(getString(cmd_1));
+                    btn[0].setBackgroundResource(R.color.red_700);
+                } else {
+                    btn[0].setBackgroundResource(R.color.red_700);
+                    Toast.makeText(this, getString(cmd_1),Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 2:
-                cmdHEX = "AAEB22020001BA55";
-                SerialPortManager.instance().sendHEXData(cmdHEX);
-                //Toast.makeText(this, cmdHEX,Toast.LENGTH_SHORT).show();
+                //cmdHEX = "AAEB22020001BA55";
+                if (mOpened){
+                    SerialPortManager.instance().sendHEXData(getString(cmd_2));
+                    btn[1].setBackgroundResource(R.color.red_700);
+                } else {
+                    btn[1].setBackgroundResource(R.color.red_700);
+                    Toast.makeText(this, getString(cmd_3),Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 3:
-                cmdHEX = "AAEB22020002BB55";
-                SerialPortManager.instance().sendHEXData(cmdHEX);
-                //Toast.makeText(this, cmdHEX,Toast.LENGTH_SHORT).show();
+                //cmdHEX = "AAEB22020002BB55";
+                if (mOpened){
+                    SerialPortManager.instance().sendHEXData(getString(cmd_3));
+                    btn[2].setBackgroundResource(R.color.red_700);
+                } else {
+                    btn[2].setBackgroundResource(R.color.red_700);
+                    Toast.makeText(this, getString(cmd_3),Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 4:
-                cmdHEX = "AAEB22020003BC55";
-                SerialPortManager.instance().sendHEXData(cmdHEX);
-                //Toast.makeText(this, cmdHEX,Toast.LENGTH_SHORT).show();
+                //cmdHEX = "AAEB22020003BC55";
+                if (mOpened){
+                    SerialPortManager.instance().sendHEXData(getString(cmd_4));
+                    btn[3].setBackgroundResource(R.color.red_700);
+                } else {
+                    btn[3].setBackgroundResource(R.color.red_700);
+                    Toast.makeText(this, getString(cmd_5),Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 5:
-                cmdHEX = "AAEB22020004BD55";
-                SerialPortManager.instance().sendHEXData(cmdHEX);
-                //Toast.makeText(this, cmdHEX,Toast.LENGTH_SHORT).show();
+                //cmdHEX = "AAEB22020004BD55";
+                if (mOpened){
+                    SerialPortManager.instance().sendHEXData(getString(cmd_5));
+                    btn[4].setBackgroundResource(R.color.red_700);
+                } else {
+                    btn[4].setBackgroundResource(R.color.red_700);
+                    Toast.makeText(this, getString(cmd_5),Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 6:
-                cmdHEX = "AAEB22020005BE55";
-                SerialPortManager.instance().sendHEXData(cmdHEX);
-                //Toast.makeText(this, cmdHEX,Toast.LENGTH_SHORT).show();
+                //cmdHEX = "AAEB22020005BE55";
+                if (mOpened){
+                    SerialPortManager.instance().sendHEXData(getString(cmd_6));
+                    btn[5].setBackgroundResource(R.color.red_700);
+                } else {
+                    btn[5].setBackgroundResource(R.color.red_700);
+                    Toast.makeText(this, getString(cmd_6),Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 7:
-                cmdHEX = "AAEB22020006BF55";
-                SerialPortManager.instance().sendHEXData(cmdHEX);
-                //Toast.makeText(this, cmdHEX,Toast.LENGTH_SHORT).show();
+                //cmdHEX = "AAEB22020006BF55";
+                if (mOpened){
+                    SerialPortManager.instance().sendHEXData(getString(cmd_7));
+                    btn[6].setBackgroundResource(R.color.red_700);
+                } else {
+                    btn[6].setBackgroundResource(R.color.red_700);
+                    Toast.makeText(this, getString(cmd_7),Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 8:
-                cmdHEX = "AAEB22020007C055";
-                SerialPortManager.instance().sendHEXData(cmdHEX);
-                //Toast.makeText(this, cmdHEX,Toast.LENGTH_SHORT).show();
+                //cmdHEX = "AAEB22020007C055";
+                if (mOpened){
+                    SerialPortManager.instance().sendHEXData(getString(cmd_8));
+                    btn[7].setBackgroundResource(R.color.red_700);
+                } else {
+                    btn[7].setBackgroundResource(R.color.red_700);
+                    Toast.makeText(this, getString(cmd_8),Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 9:
-                cmdHEX = "AAEB22020008C155";
-                SerialPortManager.instance().sendHEXData(cmdHEX);
-                //Toast.makeText(this, cmdHEX,Toast.LENGTH_SHORT).show();
+                //cmdHEX = "AAEB22020008C155";
+                if (mOpened){
+                    SerialPortManager.instance().sendHEXData(getString(cmd_9));
+                    btn[8].setBackgroundResource(R.color.red_700);
+                } else {
+                    btn[8].setBackgroundResource(R.color.red_700);
+                    Toast.makeText(this, getString(cmd_9),Toast.LENGTH_SHORT).show();
+                }
                 break;
             case 10:
-                cmdHEX = "AAEB22020009C255";
-                SerialPortManager.instance().sendHEXData(cmdHEX);
-                //Toast.makeText(this, cmdHEX,Toast.LENGTH_SHORT).show();
+                //cmdHEX = "AAEB22020009C255";
+                if (mOpened){
+                    SerialPortManager.instance().sendHEXData(getString(cmd_10));
+                    btn[9].setBackgroundResource(R.color.red_700);
+                } else {
+                    btn[9].setBackgroundResource(R.color.red_700);
+                    Toast.makeText(this, getString(cmd_10),Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
     }
@@ -145,7 +209,6 @@ public class BotonesCargarInventario extends AppCompatActivity implements View.O
      *
      */
     private void switchSerialPort() {
-
         if (mOpened) {
             SerialPortManager.instance().close();
             mOpened = false;
@@ -167,7 +230,6 @@ public class BotonesCargarInventario extends AppCompatActivity implements View.O
      * State view depending of "Is Serial port opened"
      * Habilitamos o deshabilitamos los botones
      *
-     *
      * @param isSerialPortOpened
      */
     private void updateViewState(boolean isSerialPortOpened) {
@@ -182,7 +244,6 @@ public class BotonesCargarInventario extends AppCompatActivity implements View.O
         btn[7].setEnabled(isSerialPortOpened);
         btn[8].setEnabled(isSerialPortOpened);
         btn[9].setEnabled(isSerialPortOpened);
-
     }
 
     /*
@@ -192,7 +253,6 @@ public class BotonesCargarInventario extends AppCompatActivity implements View.O
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.button:
-
                 try {
                     sendData(1);
                 } catch (IOException e) {
@@ -201,7 +261,6 @@ public class BotonesCargarInventario extends AppCompatActivity implements View.O
                 //Toast.makeText(this, "Caja 1 abierta",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.button2:
-
                 try {
                     sendData(2);
                 } catch (IOException e) {

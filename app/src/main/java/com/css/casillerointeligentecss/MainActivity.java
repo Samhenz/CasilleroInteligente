@@ -18,6 +18,14 @@ public class MainActivity extends AppCompatActivity {
     Button btnSettings;
 
     @Override
+    protected void onDestroy() {
+        finish();
+
+        super.onDestroy();
+        //System.exit(0);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -26,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
         btnRecogerPaquete=findViewById(R.id.btn_recoger_paquete);
         btnSettings=findViewById(R.id.btn_Settings);
 
-
         /**
          * Click sobre el boton Cargar Inventario
          */
@@ -34,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,LoginCargarInvent.class);
             startActivity(intent);
         });
+        /**
+         * Click sobre el boton Recoger paquete
+         */
+        btnRecogerPaquete.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this,LoginRecogerProducto.class);
+            startActivity(intent);
+        });
+
         btnSettings.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this,SerialTool.class);
             startActivity(intent);
@@ -42,19 +57,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.btn_cargar_inventario:
-                Intent intent = new Intent(MainActivity.this,LoginCargarInvent.class);
-                startActivity(intent);
-                break;
-            case R.id.btnSettings:
-                Intent intent2 = new Intent(MainActivity.this,SerialTool.class);
-                startActivity(intent2);
-                break;
-        }
-    }
-    */
+
 }

@@ -4,18 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BotonesCargarInventario">
+    tools:context=".BotonesRecogerProducto">
 
     <Button
         android:id="@+id/button5"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@color/green_700"
+        android:backgroundTint="#4CAF50"
         android:text="@string/box_5"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.35" />
@@ -24,13 +23,14 @@
         android:id="@+id/button6"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@color/green_700"
+        android:backgroundTint="#4CAF50"
         android:text="@string/box_6"
+
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toEndOf="@id/button5"
+        app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.348" />
 
@@ -38,62 +38,59 @@
         android:id="@+id/button3"
         android:layout_width="250dp"
         android:layout_height="250dp"
-
-        android:background="@color/green_700"
+        android:backgroundTint="#4CAF50"
         android:text="@string/box_3"
+
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/button6"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/button2"
-        app:layout_constraintTop_toBottomOf="@id/textView3"
-         />
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@color/green_700"
+        android:backgroundTint="#4CAF50"
         android:text="@string/box_8"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/button10"
+        app:layout_constraintBottom_toTopOf="@+id/button10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button5"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="780dp"
         android:layout_height="200dp"
-        android:background="@color/green_700"
+        android:backgroundTint="#4CAF50"
         android:text="@string/box_10"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/btnOK_cargarInventario"
+        app:layout_constraintBottom_toTopOf="@+id/btnOK_recogerProducto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button8"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@color/green_700"
+        android:backgroundTint="#4CAF50"
         android:text="@string/box_2"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@color/green_700"
+        android:backgroundTint="#4CAF50"
         android:text="@string/box_7"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button10"
@@ -106,7 +103,7 @@
         android:id="@+id/button9"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@color/green_700"
+        android:backgroundTint="#4CAF50"
         android:text="@string/box_9"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button10"
@@ -119,8 +116,9 @@
         android:id="@+id/button"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@color/green_700"
+        android:backgroundTint="#4CAF50"
         android:text="@string/box_1"
+
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toStartOf="@+id/button2"
@@ -132,7 +130,7 @@
         android:id="@+id/button4"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@color/green_700"
+        android:backgroundTint="#4CAF50"
         android:text="@string/box_4"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -146,7 +144,7 @@
         android:id="@+id/textView3"
         android:layout_width="680sp"
         android:layout_height="wrap_content"
-        android:text="@string/info_cargar_inventario"
+        android:text="@string/info_recoger_producto"
         android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
@@ -156,12 +154,12 @@
         app:layout_constraintVertical_bias="0.463" />
 
     <Button
-        android:id="@+id/btnOK_cargarInventario"
+        android:id="@+id/btnOK_recogerProducto"
         android:layout_width="330dp"
         android:layout_height="120dp"
         android:backgroundTint="@color/blue_900"
         android:drawableRight="@drawable/check_icon"
-        android:text="Finalizar"
+        android:text="@string/btnOK_recogerProducto"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -6,4 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".LoginRecogerProducto">
 
+    <EditText
+        android:id="@+id/editText_NombreRecolector"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:ems="10"
+        android:hint="@string/nombreRecolector"
+        android:inputType="textPersonName"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.246" />
+
+    <EditText
+        android:id="@+id/editText_Clave"
+        android:layout_width="500dp"
+        android:layout_height="150dp"
+        android:ems="10"
+        android:hint="@string/claverecolector"
+        android:inputType="textPersonName"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416" />
+
+    <Button
+        android:id="@+id/btn_validarRecolector"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/blue_900"
+        android:text="@string/validarRecolector"
+        android:drawableRight="@drawable/check_icon2"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.731" />
 </androidx.constraintlayout.widget.ConstraintLayout>

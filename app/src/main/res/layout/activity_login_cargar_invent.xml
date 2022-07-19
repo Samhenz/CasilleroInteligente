@@ -9,7 +9,7 @@
     <EditText
         android:id="@+id/editText_NoTelefono"
         android:layout_width="500dp"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:ems="10"
         android:hint="@string/no_de_telefono"
         android:inputType="textPersonName"
@@ -17,30 +17,15 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154" />
-
-    <EditText
-        android:id="@+id/editText_Orden"
-        android:layout_width="500dp"
-        android:layout_height="150dp"
-        android:ems="10"
-        android:hint="@string/no_de_orden"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.335" />
+        app:layout_constraintVertical_bias="0.125" />
 
     <EditText
         android:id="@+id/editText_Courier"
         android:layout_width="500dp"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:ems="10"
         android:hint="@string/nombre_courier"
         android:inputType="textPersonName"
@@ -48,15 +33,32 @@
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.334" />
+
+    <EditText
+        android:id="@+id/editText_Orden"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:ems="10"
+        android:hint="@string/no_de_orden"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23" />
 
     <Button
         android:id="@+id/btn_iniciarSesion"
         android:layout_width="400dp"
         android:layout_height="200dp"
         android:backgroundTint="@color/blue_900"
+        android:drawableRight="@drawable/check_icon2"
         android:text="@string/confirmar_login_1"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
@@ -65,4 +67,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.731" />
+
+    <EditText
+        android:id="@+id/editText_Correo"
+        android:layout_width="500dp"
+        android:layout_height="100dp"
+        android:ems="10"
+        android:hint="@string/correoCliente"
+        android:inputType="textPersonName"
+        android:textColorHint="#9A009688"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.431" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
