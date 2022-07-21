@@ -73,7 +73,8 @@ public class SerialPortManager {
 
             mInputStream = mSerialPort.getInputStream();
             //mReadThread = new SerialReadThread(mSerialPort.getInputStream());
-            //mReadThread.start();
+            mReadThread = new SerialReadThread(mInputStream);
+            mReadThread.start();
 
             mOutputStream = mSerialPort.getOutputStream();
 
@@ -93,11 +94,11 @@ public class SerialPortManager {
      * cerrar serial port
      */
     public void close() {
-        /*
+
         if (mReadThread != null) {
             mReadThread.close();
         }
-         */
+
 
         if (mOutputStream != null) {
             try {
@@ -132,7 +133,7 @@ public class SerialPortManager {
     }
 
     /**
-     * Enviar HEX Data
+     * Enviar HEX Data. Envío directo de los comandos para los candados.
      *
      */
     public void sendHEXData(final String command) throws IOException {

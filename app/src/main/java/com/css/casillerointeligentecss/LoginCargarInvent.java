@@ -94,7 +94,7 @@ public class LoginCargarInvent extends AppCompatActivity {
                 props.put("mail.smtp.port","465");
 
                 // Deshabilitar el envío de e-mail para propósitos de Debug
-
+                /*
                 try {
                     session=Session.getDefaultInstance(props, new Authenticator() {
                         @Override

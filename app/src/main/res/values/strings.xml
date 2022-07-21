@@ -28,6 +28,18 @@
     <string name="cmd_9">AAEB22020008C155</string>
     <string name="cmd_10">AAEB22020009C255</string>
 
+    <string name="casillero1_ocupado">casillero1ocupado</string>
+    <string name="casillero2_ocupado">casillero2ocupado</string>
+    <string name="casillero3_ocupado">casillero3ocupado</string>
+    <string name="casillero4_ocupado">casillero4ocupado</string>
+    <string name="casillero5_ocupado">casillero5ocupado</string>
+    <string name="casillero6_ocupado">casillero6ocupado</string>
+    <string name="casillero7_ocupado">casillero7ocupado</string>
+    <string name="casillero8_ocupado">casillero8ocupado</string>
+    <string name="casillero9_ocupado">casillero9ocupado</string>
+    <string name="casillero10_ocupado">casillero10ocupado</string>
+    <string name="mypreference">mypref</string>
+
     <string name="select_serial_port">Puerto:</string>
     <string name="select_baud_rate">Baudrate:</string>
     <string name="open_serial_port">Abrir puerto</string>
@@ -38,7 +50,7 @@
     <string name="load_cmd_list">cargar archivo ext</string>
     <string name="clear">Limpiar</string>
     <string name="auto_end">auto end</string>
-    <string name="info_cargar_inventario">Bienvenido. Seleccione un casillero, cargue el inventario y presione el botón FINALIZAR.</string>
+    <string name="info_cargar_inventario">Bienvenido. Seleccione un casillero, cargue el inventario y presione el botón ENVIAR CLAVE.</string>
     <string name="nombreRecolector">Nombre</string>
     <string name="claverecolector">Clave</string>
     <string name="validarRecolector">Validar</string>
